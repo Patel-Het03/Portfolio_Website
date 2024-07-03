@@ -1,41 +1,61 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { CardContainer, CardBody, CardItem } from "@/components/3d-card";
+import Image from "next/image";
+import { cn } from "@/utils/cn";
 
 interface ProjectCardProps {
-    imgUrl: string;
-    title: string;
-    description: string;
-    gitUrl: string;
-    previewUrl: string;
-  }
-  
-  const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+  imgUrl: string;
+  title: string;
+  description: string;
+  gitUrl: string;
+  previewUrl: string;
+  className?: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl,className }) => {
   return (
     <div>
-      <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-      >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-          <Link
-            href={gitUrl}
-            className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+      <CardContainer className={cn("inter-var",className)} >
+        <CardBody className="bg-[#04071d] grey relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.3] w-full  h-auto rounded-xl p-3 border  ">
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src={imgUrl}
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="thumbnail"
+            />
+          </CardItem>
+          <CardItem
+            translateZ="50"
+            className="text-sm font-normal dark:text-white text-white py-4"
           >
-            <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
-          </Link>
-          <Link
-            href={previewUrl}
-            className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-          >
-            <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
-          </Link>
-        </div>
-      </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
-      </div>
+            {description}
+          </CardItem>
+
+          <div className="flex justify-between items-center mt-20">
+            <CardItem
+              translateZ={20}
+              as={Link}
+              href={gitUrl}
+              target="__blank"
+              className="px-4 py-2 rounded-xl text-xs font-normal text-white"
+            >
+              GitHub Link →
+            </CardItem>
+            <CardItem
+              translateZ={20}
+              as="button"
+              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              href={previewUrl}
+            >
+              Preview
+            </CardItem>
+          </div>
+        </CardBody>
+      </CardContainer>
     </div>
   );
 };

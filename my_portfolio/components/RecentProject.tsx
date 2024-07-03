@@ -3,22 +3,24 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { CardContainer, CardBody, CardItem } from "@/components/3d-card";
 
 const projectsData = [
     {
         id: 1,
         title: "Campus InOut Management System ",
         description: "Campus InOut Management System for students and teachers.",
-        image: "/images/projects/2.png",
+        image: "/images/projects/Campus-InOut-Image.jpg",
         tag: ["All", "App"],
         gitUrl: "https://github.com/Patel-Het03/DEP24-P13-Campus-InOut-Management-App",
         previewUrl: "/",
+        className: "lg:col-span-2 md:col-span-3 md:row-span-2 text-white",
     },
     {
         id: 2,
         title: "Project Management System",
         description: "Project Management System for managing projects and tasks.",
-        image: "/images/projects/3.png",
+        image: "/images/projects/Project-Management-Image.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/SE_Project-Management-Software",
         previewUrl: "/",
@@ -36,7 +38,7 @@ const projectsData = [
         id: 4,
         title: "Petrol Pump Management System",
         description: "Petrol Pump Management System for managing petrol pumps.",
-        image: "/images/projects/4.png",
+        image: "/images/projects/database-image.jpg",
         tag: ["All"],
         gitUrl: "https://github.com/Patel-Het03/PetrolPump-Management-System",
         previewUrl: "/",
@@ -45,16 +47,16 @@ const projectsData = [
         id: 5,
         title: "B-- Compiler",
         description: "B-- Compiler for compiling B-- language code.",
-        image: "/images/projects/5.png",
+        image: "/images/projects/Compiler-image.jpg",
         tag: ["All"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/Patel-Het03/B--Compiler",
         previewUrl: "/",
     },
     {
         id: 6,
         title: "React Movie Website",
         description: "React Movie Website for searching movies and tv shows.",
-        image: "/images/projects/6.png",
+        image: "/images/projects/Movie.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/Movie-App",
         previewUrl: "/",
@@ -80,7 +82,7 @@ const RecentProject = () => {
     };
 
     return (
-        <div className="py-10">
+        <div className="py-10 w-full" id="project">
             <h1 className="heading text-white">
                 A small selection of{" "}
                 <span className="text-purple">recent projects</span>
@@ -102,7 +104,7 @@ const RecentProject = () => {
                     isSelected={tag === "App"}
                 />
             </div>
-            <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+            <ul ref={ref} className="grid md:grid-cols-3 md:gap-x-10 gap-y-9 ">
                 {filteredProjects.map((project, index) => (
                     <motion.li
                         key={index}
@@ -118,10 +120,12 @@ const RecentProject = () => {
                             imgUrl={project.image}
                             gitUrl={project.gitUrl}
                             previewUrl={project.previewUrl}
+                            className={project.className}
                         />
                     </motion.li>
-                ))}
-            </ul>
+                ))} 
+             </ul>
+            
         </div>
     )
 }
