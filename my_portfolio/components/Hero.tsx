@@ -8,6 +8,9 @@ import { TypeAnimation } from 'react-type-animation'
 import Image from 'next/image'
 import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa'
+import { GoogleGeminiEffect } from './ui/google-gemini-effect';
+import { LampContainer } from './ui/lamp';
+
 
 const Hero = () => {
   return (
@@ -70,15 +73,6 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="col-span-4 place-self-center mt-4 lg:mt-0"
           >
-            <div className="rounded-full bg-black-100 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-              <Image
-                src="/images/hero-image.png"
-                alt="hero image"
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 mx-2"
-                width={300}
-                height={300}
-              />
-            </div>
           </motion.div>
         </div>
       </section>

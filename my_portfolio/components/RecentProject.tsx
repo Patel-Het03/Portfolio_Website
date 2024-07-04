@@ -9,7 +9,7 @@ const projectsData = [
     {
         id: 1,
         title: "Campus InOut Management System ",
-        description: "Campus InOut Management System for students and teachers.",
+        description: "This project aims to develop a campus InOut management application that tracks and manages the entry and exit of students, staff, and visitors on a university campus. The app will handle user authentication, ticket generation and verification through QR codes on campus entry and exit.",
         image: "/images/projects/Campus-InOut-Image.jpg",
         tag: ["All", "App"],
         gitUrl: "https://github.com/Patel-Het03/DEP24-P13-Campus-InOut-Management-App",
@@ -19,7 +19,7 @@ const projectsData = [
     {
         id: 2,
         title: "Project Management System",
-        description: "Project Management System for managing projects and tasks.",
+        description: "Developed a collaborative project management system that streamlines team collaboration and task tracking, enhancing project workflows. The system includes features like secure user access through JWT-based authentication and efficient data storage with MongoDB. Built using React for the frontend and Node.js for the backend.",
         image: "/images/projects/Project-Management-Image.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/SE_Project-Management-Software",
@@ -27,8 +27,8 @@ const projectsData = [
     },
     {
         id: 3,
-        title: "React Portfolio Website",
-        description: "My personal portfolio website built with Next and Tailwind CSS.",
+        title: "Portfolio Website",
+        description: "My portfolio website is built using Next.js with TypeScript and Aceternity UI, showcasing my projects and professional experience. It provides a comprehensive view of my skills and accomplishments in software development. Explore my work and get to know my journey in the tech industry.",
         image: "/images/projects/portfolio.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/Portfolio_Website",
@@ -37,7 +37,7 @@ const projectsData = [
     {
         id: 4,
         title: "Petrol Pump Management System",
-        description: "Petrol Pump Management System for managing petrol pumps.",
+        description: "A PetrolPump Management System built using Python and MySQL, featuring a Streamlit-based user interface. The system supports comprehensive CRUD operations and includes advanced functionalities such as salary triggers and price calculations, offering an efficient solution for managing petrol pump operations. Developed as part of a DBMS course project.",
         image: "/images/projects/database-image.jpg",
         tag: ["All"],
         gitUrl: "https://github.com/Patel-Het03/PetrolPump-Management-System",
@@ -46,7 +46,7 @@ const projectsData = [
     {
         id: 5,
         title: "B-- Compiler",
-        description: "B-- Compiler for compiling B-- language code.",
+        description: "Developed a B-- compiler as part of a course project. Utilized BMM for parsing and a custom lexer for tokenization. The compiler translates B-- code into executable binaries",
         image: "/images/projects/Compiler-image.jpg",
         tag: ["All"],
         gitUrl: "https://github.com/Patel-Het03/B--Compiler",
@@ -55,13 +55,13 @@ const projectsData = [
     {
         id: 6,
         title: "React Movie Website",
-        description: "React Movie Website for searching movies and tv shows.",
+        description: "The Movie App is a web application that allows users to search for movies and view detailed information about them. The app utilizes the TMDB API to fetch movie data and displays it in a user-friendly interface.",
         image: "/images/projects/Movie.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/Movie-App",
         previewUrl: "/",
     },
-];
+]; 
 
 const RecentProject = () => {
     const [tag, setTag] = useState("All");
@@ -104,7 +104,7 @@ const RecentProject = () => {
                     isSelected={tag === "App"}
                 />
             </div>
-            <ul ref={ref} className="grid md:grid-cols-3 md:gap-x-10 gap-y-9 ">
+            <ul ref={ref} className="grid md:grid-cols-3 md:gap-x-10 gap-y-9 h-full">
                 {filteredProjects.map((project, index) => (
                     <motion.li
                         key={index}

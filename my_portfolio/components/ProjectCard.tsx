@@ -16,9 +16,9 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl,className }) => {
   return (
-    <div>
-      <CardContainer className={cn("inter-var",className)} >
-        <CardBody className="bg-[#04071d] grey relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.3] w-full  h-auto rounded-xl p-3 border  ">
+    <div className="h-full">
+      <CardContainer className={cn("inter-var ",className)} >
+        <CardBody className="bg-[#04071d] grey relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.3] w-full h-full rounded-xl p-3 border  ">
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
               src={imgUrl}
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, g
             {description}
           </CardItem>
 
-          <div className="flex justify-between items-center mt-20">
+          <div className="flex justify-between mt-10 ">
             <CardItem
               translateZ={20}
               as={Link}
@@ -48,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, g
             <CardItem
               translateZ={20}
               as="button"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-black text-xs font-bold"
               href={previewUrl}
             >
               Preview
