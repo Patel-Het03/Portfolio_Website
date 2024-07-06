@@ -22,7 +22,7 @@ const Hero = () => {
       />
       <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       <section className="lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-12">
+        <div className="grid grid-cols-1 sm:grid-cols-11">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}

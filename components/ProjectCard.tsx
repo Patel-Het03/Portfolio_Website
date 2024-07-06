@@ -14,10 +14,10 @@ interface ProjectCardProps {
   className?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl,className }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl, className }) => {
   return (
     <div className="h-full">
-      <CardContainer className={cn("inter-var ",className)} >
+      <CardContainer className={cn("inter-var ", className)} >
         <CardBody className="bg-[#04071d] grey relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.3] w-full h-full rounded-xl p-3 border  ">
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
@@ -45,14 +45,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imgUrl, title, description, g
             >
               GitHub Link →
             </CardItem>
-            <CardItem
-              translateZ={20}
-              as="button"
-              className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-black text-xs font-bold"
-              href={previewUrl}
-            >
-              Preview
-            </CardItem>
+            <a href={previewUrl}>
+              <CardItem
+                translateZ={20}
+                as="button"
+                className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-black text-xs font-bold"
+                href={previewUrl}
+              >
+                Preview
+              </CardItem>
+            </a>
           </div>
         </CardBody>
       </CardContainer>

@@ -13,7 +13,7 @@ const projectsData = [
         image: "/images/projects/Campus-InOut-Image.jpg",
         tag: ["All", "App"],
         gitUrl: "https://github.com/Patel-Het03/DEP24-P13-Campus-InOut-Management-App",
-        previewUrl: "/",
+        previewUrl: "/404Page",
         className: "lg:col-span-2 md:col-span-3 md:row-span-2 text-white",
     },
     {
@@ -23,16 +23,16 @@ const projectsData = [
         image: "/images/projects/Project-Management-Image.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/SE_Project-Management-Software",
-        previewUrl: "/",
+        previewUrl: "/404Page",
     },
     {
         id: 3,
         title: "Portfolio Website",
         description: "My portfolio website is built using Next.js with TypeScript and Aceternity UI, showcasing my projects and professional experience. It provides a comprehensive view of my skills and accomplishments in software development. Explore my work and get to know my journey in the tech industry.",
-        image: "/images/projects/portfolio.jpg",
+        image: "/images/Portfolio1.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/Portfolio_Website",
-        previewUrl: "/",
+        previewUrl: "https://patel-het.vercel.app/",
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const projectsData = [
         image: "/images/projects/database-image.jpg",
         tag: ["All"],
         gitUrl: "https://github.com/Patel-Het03/PetrolPump-Management-System",
-        previewUrl: "/",
+        previewUrl: "/404Page",
     },
     {
         id: 5,
@@ -50,7 +50,7 @@ const projectsData = [
         image: "/images/projects/Compiler-image.jpg",
         tag: ["All"],
         gitUrl: "https://github.com/Patel-Het03/B--Compiler",
-        previewUrl: "/",
+        previewUrl: "/404Page",
     },
     {
         id: 6,
@@ -59,7 +59,7 @@ const projectsData = [
         image: "/images/projects/Movie.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/Patel-Het03/Movie-App",
-        previewUrl: "/",
+        previewUrl: "/404Page",
     },
 ]; 
 

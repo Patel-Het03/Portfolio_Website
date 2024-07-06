@@ -13,7 +13,7 @@ export const navItems = [
       title: "Indian Institute of Technology Ropar",
       description: "Computer Science & Engineering",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] text-white",
-      imgClassName: "w-full h-full",
+      imgClassName: "w-full h-full bg-black/40",
       titleClassName: "justify-end",
       img: "/c5.svg",
       spareImg: "",
